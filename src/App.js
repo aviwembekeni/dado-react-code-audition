@@ -1,5 +1,5 @@
 import Home from './components/home/Home';
-import CommmitViewer from './components/commtViewer/CommitViewer';
+import CommmitViewer from './components/commitViewer/CommitViewer';
 
 import {
   BrowserRouter as Router,
