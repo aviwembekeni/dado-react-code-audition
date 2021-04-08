@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 import Navbar from './Navbar';
 import RepoSearchInput from '../../common/RepoSearchInput';
-import fetchRepoCommitsFromGithub from '../../api/fetchRepoCommitsFromGithub';
 class Home extends Component {
 
   fetchRepoCommits = async (repoName) => {
-   const repoCommits = await fetchRepoCommitsFromGithub(repoName);
-   console.log(repoCommits);
+    this.props.history.push({
+      pathname: 'commits',
+      state: {repoName}
+    });
   }
 
   render() {

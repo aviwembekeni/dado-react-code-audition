@@ -1,9 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;700;800;900&display=swap');
 
 .navbar {
-  padding: 20px;
+  height: 130px;
   display: flex;
   align-items: center;
+  justify-content: center;
   /* max-width: 700px; */
   /* margin: 0 auto; */
 }
@@ -148,4 +149,26 @@
   font-size: 16px;
   font-family: Inter;
 
+}
+
+.commit-view-header input{
+  width: 694px;
+  height: 58px;
+  background: #DFE4EA;
+  border-radius: 8px;
+  font-size: 20px;
+  font-family: Inter;
+}
+
+.commit-view-header button {
+  width: 210px;
+  margin-left: 10px;;
+  bottom: 0%;
+  height: 58px;
+  background: #F3663F;
+  border-radius: 8px;
+  font-size: 20px;
+  font-family: Inter;
+  font-weight: 600;
+  color: #fff;
 }
