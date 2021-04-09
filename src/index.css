@@ -190,14 +190,20 @@
   height: 94px;
 }
 
-.left, .right {
+.left {
   width: 25%;
   display: flex;
-  align-items: flex-end;
-  justify-content: flex-end;
-  overflow: hidden;
-
+  align-items: flex;
+  justify-content: center;
 }
+
+.right {
+  width: 25%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 
 .row:after {
   content: "";
@@ -208,21 +214,27 @@
 .middle {
   width: 50%;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: flex-start;
 }
 
 .user-avatar {
     width: 60px;
     height: 60px;
+    right: 90.09%;
+    top: 0%;
+    bottom: 36.17%;
     -webkit-border-radius: 60px;
     -webkit-background-clip: padding-box;
     -moz-border-radius: 60px;
     -moz-background-clip: padding;
     border-radius: 60px;
     background-clip: padding-box;
-    margin: 7px 0 0 5px;
-    float: left;
     background-size: cover;
     background-position: center center;
+}
+@media only screen and (max-width: 1180px) {
+  .commit-view-header div {
+    display: none;
+  }
 }

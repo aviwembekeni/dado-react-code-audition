@@ -47,13 +47,14 @@ class CommitViewer extends Component {
                             '-' + ('0'+(date.getMonth()+1)).slice(-2) + '-' + date.getFullYear();
         return (
           <div key={i} className='row'>
-            <div className='column left' style={{background:'#aaa'}}>
-              <div className="user-avatar" style={{backgroundImage: `url(${commit.author.avatar_url})`}}></div>
+            <div className='column left' >
+              <div className="user-avatar" style={{backgroundImage: `url(${commit.author.avatar_url})`}}/>
+              <p style={{float:"left"}}>{commit.author.login}</p>
             </div>
-            <div className='column middle' style={{background:'#bbb'}}>
+            <div className='column middle'>
               <p>{commit.commit.message}</p>
             </div>
-            <div className='column right' style={{background:'#ccc'}}>
+            <div className='column right' >
               <p>{dateString}</p>
             </div>
           </div>
