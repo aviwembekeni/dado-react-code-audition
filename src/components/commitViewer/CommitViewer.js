@@ -48,7 +48,7 @@ class CommitViewer extends Component {
         return (
           <div key={i} className='row'>
             <div className='column left' style={{background:'#aaa'}}>
-              <p>Some text..</p>
+              <div className="user-avatar" style={{backgroundImage: `url(${commit.author.avatar_url})`}}></div>
             </div>
             <div className='column middle' style={{background:'#bbb'}}>
               <p>{commit.commit.message}</p>
