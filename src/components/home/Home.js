@@ -23,7 +23,7 @@ class Home extends Component {
        <div className="repo-search">
         <RepoSearchInput fetchRepoCommits={this.fetchRepoCommits}/>
         <p>Or pick one of these suggested repos</p>
-        <div className="repo-search-default-btns">
+        <div className="repo-search-default-btns center">
           <button onClick={() => this.fetchRepoCommits('django/django')}>django/django</button>
           <button onClick={() => this.fetchRepoCommits('microsoft/vscode')}>microsoft/vscode</button>
           <button onClick={() => this.fetchRepoCommits('jezen/is-thirteen')}>jezen/is-thirteen</button>
