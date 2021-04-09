@@ -4,21 +4,27 @@ class RepoSearchInput extends Component {
   constructor(props){
     super();
     this.state = {
-      repoName: '',
+      repositoryName: '',
+    }
+  }
+
+  componentWillReceiveProps(nextProps){
+    if(nextProps.repoName !== this.props.repoName){
+      this.setState({repositoryName: nextProps.repoName})
     }
   }
 
   render() {
     const { fetchRepoCommits } = this.props;
-    const { repoName } = this.state;
+    const { repositoryName } = this.state;
     return (
       <div>
         <input
-          value={repoName}
+          value={repositoryName}
           placeholder="  E.g. facebook/react"
-          onChange={e => this.setState({repoName: e.target.value})}
+          onChange={e => this.setState({repositoryName: e.target.value})}
           type='text'/>
-        <button className="repo-search-input-button" onClick={() => fetchRepoCommits(repoName)}>See commits</button>
+        <button className="repo-search-input-button" onClick={() => fetchRepoCommits(repositoryName)}>See commits</button>
       </div>
     );
   }
