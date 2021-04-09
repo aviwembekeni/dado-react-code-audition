@@ -25,6 +25,7 @@ class CommitViewer extends Component {
   }
 
   render() {
+    const { repoName } = this.props.location.state;
     const { commits } = this.state;
 
     let commitsView;
@@ -39,6 +40,7 @@ class CommitViewer extends Component {
           <h3>CommitViewer</h3>
           <RepoSearchInput fetchRepoCommits={this.fetchRepoCommits}/>
         </div>
+        <h3 className='repo-name'>{repoName || ''}</h3>
         <div>
          {commitsView}
         </div>

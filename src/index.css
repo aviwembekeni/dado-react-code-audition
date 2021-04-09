@@ -92,7 +92,7 @@
 
 .repo-search {
   margin: auto;
-  width: 920px;
+  width: 80%;
   height: 161px;
   left: 240px;
 }
@@ -171,4 +171,18 @@
   font-family: Inter;
   font-weight: 600;
   color: #fff;
+}
+
+.repo-name {
+  text-align: center;
+  height: 44px;
+  top: 162px;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 44px;
+  letter-spacing: -1.5px;
+  color: #29335C;
+
 }
