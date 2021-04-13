@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 import RepoSearchInput from '../../common/RepoSearchInput';
 import fetchRepoCommitsFromGithub from '../../api/fetchRepoCommitsFromGithub';
@@ -65,7 +66,10 @@ class CommitViewer extends Component {
     return (
       <div>
         <div className='navbar commit-view-header' style={{background: '#EFF2F6'}}>
-          <h3>CommitViewer</h3>
+          <Link to="/">
+            <h3>CommitViewer</h3>
+          </Link>
+
           <RepoSearchInput fetchRepoCommits={this.fetchRepoCommits} repoName={repoName}/>
         </div>
         <h3 className='repo-name'>{repoName || ''}</h3>

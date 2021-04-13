@@ -18,7 +18,7 @@ class RepoSearchInput extends Component {
     const { fetchRepoCommits } = this.props;
     const { repositoryName } = this.state;
     return (
-      <div>
+      <div className="content">
         <input
           value={repositoryName}
           placeholder="  E.g. facebook/react"

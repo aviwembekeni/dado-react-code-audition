@@ -10,7 +10,8 @@
 }
 
 .navbar .viewer {
-  text-align: left;
+  grid-area: left;
+  width: 60%;
   height: 34px;
   top: calc(50% - 34px/2);
   font-family: Inter;
@@ -23,16 +24,14 @@
   flex: none;
   order: 0;
   flex-grow: 0;
-  margin: 0px 10px;
+  margin-left: 145px;
 
-}
-
-.navbar .about{
-  margin-left: auto;
 }
 
 .navbar .about {
-  width: 56px;
+  grid-area: middle;
+  width: 10%;
+  /* margin-left: auto; */
   height: 28px;
   font-family: Inter;
   font-style: normal;
@@ -44,7 +43,8 @@
 }
 
 .navbar .contacts {
-  width: 73px;
+  grid-area: right;
+  width: 10%;
   height: 28px;
   font-family: Inter;
   font-style: normal;
@@ -57,7 +57,7 @@
   flex: none;
   order: 1;
   flex-grow: 0;
-  margin: 0px 64px;
+  margin-right: 145px;
 }
 
 .header-container {
@@ -130,6 +130,10 @@
   text-align: center;
   letter-spacing: -0.4px;
   color: #3E4462;
+}
+
+.repo-search .repo-search-default-btns  {
+
 }
 
 .repo-search .repo-search-default-btns button {
@@ -372,6 +376,7 @@
     letter-spacing: -0.4px;
     color: #3E4462;
   }
+
   .repo-search .repo-search-input-button {
     width: 100%;
     margin-left: 0;
@@ -401,3 +406,13 @@
 
 
 }
+
+@media only screen and (min-width: 1180px) {
+  .repo-search .content, .repo-search-default-btns {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+}
+
