@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faRocket } from '@fortawesome/free-solid-svg-icons';
 
 class RepoSearchInput extends Component {
   constructor(props){
@@ -19,12 +21,13 @@ class RepoSearchInput extends Component {
     const { repositoryName } = this.state;
     return (
       <div className="content">
+        <FontAwesomeIcon icon="coffee" />
         <input
           value={repositoryName}
           placeholder="  E.g. facebook/react"
           onChange={e => this.setState({repositoryName: e.target.value})}
           type='text'/>
-        <button className="repo-search-input-button" onClick={() => fetchRepoCommits(repositoryName)}>See commits</button>
+        <button className="repo-search-input-button" onClick={() => fetchRepoCommits(repositoryName)}>See commits <FontAwesomeIcon icon={faRocket}/></button>
       </div>
     );
   }
