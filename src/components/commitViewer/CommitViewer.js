@@ -66,7 +66,7 @@ class CommitViewer extends Component {
     return (
       <div>
         <div className='navbar commit-view-header' style={{background: '#EFF2F6'}}>
-          <Link to="/">
+          <Link to="/" style={{textDecoration: 'none'}}>
             <h3>CommitViewer</h3>
           </Link>
 
